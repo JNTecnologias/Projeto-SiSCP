@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBsiscp" Class="siscpDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\;Initial Catalog=DBsiscp;Persist Security Info=True;User ID=siscp" SettingsObjectName="siscp.DAL.Properties.Settings" SettingsPropertyName="DBsiscpConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Table_depend" Member="Table_depend">
+    <Type Name="Table_depend">
+      <Column Name="id_depend" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cpf_depend" Type="System.Decimal" DbType="Decimal(11,0)" CanBeNull="true" />
+      <Column Name="nome_depend" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="nasc_depend" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="end_depend" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="bairro_depend" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="cep_depend" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="email_depend" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="id_parentesco_depend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="obs_depend" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="id_titular_depend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_endereco_denpend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Table_depend_Table_tratamento1" Member="Table_tratamento1" ThisKey="id_depend" OtherKey="id_depend" Type="Table_tratamento1" />
+      <Association Name="Table_titular_Table_depend" Member="Table_titular" ThisKey="id_titular_depend" OtherKey="id_titular" Type="Table_titular" IsForeignKey="true" />
+      <Association Name="Table_endereco_Table_depend" Member="Table_endereco" ThisKey="id_endereco_denpend" OtherKey="id_endereco" Type="Table_endereco" IsForeignKey="true" />
+      <Association Name="Table_parentesco_Table_depend" Member="Table_parentesco" ThisKey="id_parentesco_depend" OtherKey="id_parentesco" Type="Table_parentesco" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_titular" Member="Table_titular">
+    <Type Name="Table_titular">
+      <Column Name="id_titular" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cpf_titular" Type="System.Decimal" DbType="Decimal(11,0) NOT NULL" CanBeNull="false" />
+      <Column Name="nome_titular" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nasc_titular" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="rg_titular" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Column Name="end_titular" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="cep_titular" Type="System.Decimal" DbType="Decimal(8,0)" CanBeNull="true" />
+      <Column Name="email_titular" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="obs_titular" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="bairro_titular" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="id_endereco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Table_titular_Table_depend" Member="Table_depend" ThisKey="id_titular" OtherKey="id_titular_depend" Type="Table_depend" />
+      <Association Name="Table_titular_Table_tratamento1" Member="Table_tratamento1" ThisKey="id_titular" OtherKey="id_titular" Type="Table_tratamento1" />
+      <Association Name="Table_endereco_Table_titular" Member="Table_endereco" ThisKey="id_endereco" OtherKey="id_endereco" Type="Table_endereco" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_endereco" Member="Table_endereco">
+    <Type Name="Table_endereco">
+      <Column Name="id_endereco" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cidades" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="estados" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
+      <Association Name="Table_endereco_Table_depend" Member="Table_depend" ThisKey="id_endereco" OtherKey="id_endereco_denpend" Type="Table_depend" />
+      <Association Name="Table_endereco_Table_titular" Member="Table_titular" ThisKey="id_endereco" OtherKey="id_endereco" Type="Table_titular" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_etapa1" Member="Table_etapa1">
+    <Type Name="Table_etapa1">
+      <Column Name="id_etapa1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_proced1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dente_etapa1" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="valor_paciente1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="valor_sindicato1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="valor_pago_paciente1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="valor_pago_sindicato1" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="data_tratamento1" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="unidade_tratamento1" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Association Name="Table_etapa1_Table_tratamento1" Member="Table_tratamento1" ThisKey="id_etapa1" OtherKey="id_etapa1" Type="Table_tratamento1" />
+      <Association Name="Table_proced_Table_etapa1" Member="Table_proced" ThisKey="id_proced1" OtherKey="id_proced" Type="Table_proced" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_etapa2" Member="Table_etapa2">
+    <Type Name="Table_etapa2">
+      <Column Name="id_etapa2" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_proced2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dente_etapa2" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="valor_paciente2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="valor_sindicato2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="valor_pago_paciente2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="valor_pago_sindicato2" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="data_tratamento2" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="unidade_tratamento2" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Association Name="Table_etapa2_Table_tratamento1" Member="Table_tratamento1" ThisKey="id_etapa2" OtherKey="id_etapa2" Type="Table_tratamento1" />
+      <Association Name="Table_proced_Table_etapa2" Member="Table_proced" ThisKey="id_proced2" OtherKey="id_proced" Type="Table_proced" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_parentesco" Member="Table_parentesco">
+    <Type Name="Table_parentesco">
+      <Column Name="id_parentesco" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="desc_parentesco" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Table_parentesco_Table_depend" Member="Table_depend" ThisKey="id_parentesco" OtherKey="id_parentesco_depend" Type="Table_depend" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_proced" Member="Table_proced">
+    <Type Name="Table_proced">
+      <Column Name="id_proced" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="desc_proced" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="valor_proced" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="Table_proced_Table_etapa1" Member="Table_etapa1" ThisKey="id_proced" OtherKey="id_proced1" Type="Table_etapa1" />
+      <Association Name="Table_proced_Table_etapa2" Member="Table_etapa2" ThisKey="id_proced" OtherKey="id_proced2" Type="Table_etapa2" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_status" Member="Table_status">
+    <Type Name="Table_status">
+      <Column Name="id_status" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="desc_status" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Association Name="Table_status_Table_tratamento1" Member="Table_tratamento1" ThisKey="id_status" OtherKey="id_status" Type="Table_tratamento1" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Table_tratamento1" Member="Table_tratamento1">
+    <Type Name="Table_tratamento1">
+      <Column Name="id_tratamento" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_titular" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_depend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_endereco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_telefone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_etapa1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nf_tratamento1" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="data_pagamento_tratamento1" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="id_etapa2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Table_depend_Table_tratamento1" Member="Table_depend" ThisKey="id_depend" OtherKey="id_depend" Type="Table_depend" IsForeignKey="true" />
+      <Association Name="Table_etapa1_Table_tratamento1" Member="Table_etapa1" ThisKey="id_etapa1" OtherKey="id_etapa1" Type="Table_etapa1" IsForeignKey="true" />
+      <Association Name="Table_etapa2_Table_tratamento1" Member="Table_etapa2" ThisKey="id_etapa2" OtherKey="id_etapa2" Type="Table_etapa2" IsForeignKey="true" />
+      <Association Name="Table_status_Table_tratamento1" Member="Table_status" ThisKey="id_status" OtherKey="id_status" Type="Table_status" IsForeignKey="true" />
+      <Association Name="Table_titular_Table_tratamento1" Member="Table_titular" ThisKey="id_titular" OtherKey="id_titular" Type="Table_titular" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

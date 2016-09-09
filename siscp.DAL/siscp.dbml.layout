@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 15.5" name="siscp">
+  <DataContextMoniker Name="/siscpDataContext" />
+  <nestedChildShapes>
+    <classShape Id="48ae39c4-b423-4211-961f-6da79daaabbf" absoluteBounds="6.25, 3, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/siscpDataContext/Table_depend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9dc428a6-cb89-4199-957f-8c34e186a7cc" absoluteBounds="6.265, 3.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48b36d42-49e4-4ec7-bb21-bf8fd79f3c2d" absoluteBounds="3.5, 3.125, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/siscpDataContext/Table_titular" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcbf17ea-e358-4b75-8cbd-7b6c52cc59d8" absoluteBounds="3.515, 3.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea33ca39-cdd0-40cb-8998-9511cd4090d7" absoluteBounds="0.75, 3.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/siscpDataContext/Table_endereco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c9de774-3106-40bd-8ff7-549432770bca" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32f59f72-1cf4-45ae-9476-593bc99c1c41" absoluteBounds="6.25, 9.5, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/siscpDataContext/Table_etapa1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a43ef7c-15cd-48fb-97f0-54279788c399" absoluteBounds="6.265, 9.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe067dae-25db-4edc-8e5d-460549219bdc" absoluteBounds="6.25, 12.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/siscpDataContext/Table_etapa2" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd3b81e6-a72a-4b56-b0ed-03fbd5d97e36" absoluteBounds="6.265, 13.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="daebb3bd-5691-4217-a036-6d3e3c090b8a" absoluteBounds="3.5, 1, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/siscpDataContext/Table_parentesco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d28b5960-daab-4c9a-a3cd-1000e4e1d4dd" absoluteBounds="3.515, 1.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e2b180f-82ea-4f15-9d47-1304909da6b0" absoluteBounds="3.5, 10, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/siscpDataContext/Table_proced" />
+      <nestedChildShapes>
+        <elementListCompartment Id="57e0a54c-3d5f-4817-bd8c-284ea052380b" absoluteBounds="3.515, 10.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da2ef44f-903d-4a66-8841-6b7b3e1f75bc" absoluteBounds="6.25, 7.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/siscpDataContext/Table_status" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c452c41b-3cbe-4012-8a1a-19854bf07dcd" absoluteBounds="6.265, 7.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c974b0c7-efb7-42d9-99a3-e0d86795fbba" absoluteBounds="9, 3.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/siscpDataContext/Table_tratamento1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3ee374f-c982-48ce-a7e3-4f6c3a6934c3" absoluteBounds="9.015, 3.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.58735270182292); (6.25 : 4.58735270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_titular/Table_titular_Table_depend" />
+      <nodes>
+        <classShapeMoniker Id="48b36d42-49e4-4ec7-bb21-bf8fd79f3c2d" />
+        <classShapeMoniker Id="48ae39c4-b423-4211-961f-6da79daaabbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 3.875); (1.75 : 3.03125); (6.25 : 3.03125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_endereco/Table_endereco_Table_depend" />
+      <nodes>
+        <classShapeMoniker Id="ea33ca39-cdd0-40cb-8998-9511cd4090d7" />
+        <classShapeMoniker Id="48ae39c4-b423-4211-961f-6da79daaabbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.56814697265625); (3.5 : 4.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_endereco/Table_endereco_Table_titular" />
+      <nodes>
+        <classShapeMoniker Id="ea33ca39-cdd0-40cb-8998-9511cd4090d7" />
+        <classShapeMoniker Id="48b36d42-49e4-4ec7-bb21-bf8fd79f3c2d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.59699625651042); (7.25 : 1.59699625651042); (7.25 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_parentesco/Table_parentesco_Table_depend" />
+      <nodes>
+        <classShapeMoniker Id="daebb3bd-5691-4217-a036-6d3e3c090b8a" />
+        <classShapeMoniker Id="48ae39c4-b423-4211-961f-6da79daaabbf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.6931469726562); (6.25 : 10.6931469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_proced/Table_proced_Table_etapa1" />
+      <nodes>
+        <classShapeMoniker Id="6e2b180f-82ea-4f15-9d47-1304909da6b0" />
+        <classShapeMoniker Id="32f59f72-1cf4-45ae-9476-593bc99c1c41" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 11.3862939453125); (4.5 : 14.0200512695312); (6.25 : 14.0200512695312)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_proced/Table_proced_Table_etapa2" />
+      <nodes>
+        <classShapeMoniker Id="6e2b180f-82ea-4f15-9d47-1304909da6b0" />
+        <classShapeMoniker Id="fe067dae-25db-4edc-8e5d-460549219bdc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.61620198567708); (8.54166666666667 : 4.61620198567708 : JumpStart); (8.70833333333333 : 4.61620198567708 : JumpEnd); (9 : 4.61620198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_depend/Table_depend_Table_tratamento1" />
+      <nodes>
+        <classShapeMoniker Id="48ae39c4-b423-4211-961f-6da79daaabbf" />
+        <classShapeMoniker Id="c974b0c7-efb7-42d9-99a3-e0d86795fbba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 10.7700512695312); (9.38541416666667 : 10.7700512695312 : JumpStart); (9.55208083333333 : 10.7700512695312 : JumpEnd); (10 : 10.7700512695312); (10 : 5.98240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_etapa1/Table_etapa1_Table_tratamento1" />
+      <nodes>
+        <classShapeMoniker Id="32f59f72-1cf4-45ae-9476-593bc99c1c41" />
+        <classShapeMoniker Id="c974b0c7-efb7-42d9-99a3-e0d86795fbba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 14.0200512695312); (9.4687475 : 14.0200512695312); (9.4687475 : 5.98240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_etapa2/Table_etapa2_Table_tratamento1" />
+      <nodes>
+        <classShapeMoniker Id="fe067dae-25db-4edc-8e5d-460549219bdc" />
+        <classShapeMoniker Id="c974b0c7-efb7-42d9-99a3-e0d86795fbba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8.09699625651042); (9.38541416666667 : 8.09699625651042 : JumpStart); (9.55208083333333 : 8.09699625651042 : JumpEnd); (9.91666666666667 : 8.09699625651042 : JumpStart); (10.0833333333333 : 8.09699625651042 : JumpEnd); (10.5312525 : 8.09699625651042); (10.5312525 : 5.98240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_status/Table_status_Table_tratamento1" />
+      <nodes>
+        <classShapeMoniker Id="da2ef44f-903d-4a66-8841-6b7b3e1f75bc" />
+        <classShapeMoniker Id="c974b0c7-efb7-42d9-99a3-e0d86795fbba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 6.04970540364583); (4.5 : 6.3670068359375); (8.625 : 6.3670068359375); (8.625 : 3.90184899283854); (9 : 3.90184899283854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/siscpDataContext/Table_titular/Table_titular_Table_tratamento1" />
+      <nodes>
+        <classShapeMoniker Id="48b36d42-49e4-4ec7-bb21-bf8fd79f3c2d" />
+        <classShapeMoniker Id="c974b0c7-efb7-42d9-99a3-e0d86795fbba" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
